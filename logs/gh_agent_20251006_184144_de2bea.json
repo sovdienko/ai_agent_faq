@@ -1,0 +1,141 @@
+{
+  "agent_name": "gh_agent",
+  "system_prompt": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "tools": [
+    "search"
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "How I can join the courses?",
+          "timestamp": "2025-10-06T18:41:43.846098+00:00",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "args": "{\"query\":\"join courses\"}",
+          "tool_call_id": "call_KuIQlaZwVvDgutVCyyFVTp3j",
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 207,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 14,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "model_name": "openai/gpt-4o-mini",
+      "timestamp": "2025-10-06T18:41:43+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "gen-1759776103-ut4hPD3UbRDIUCeEJz64",
+      "finish_reason": "tool_call"
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search",
+          "content": [
+            {
+              "id": "3f1424af17",
+              "question": "Course: Can I still join the course after the start date?",
+              "sort_order": 3,
+              "content": "Yes, even if you don't register, you're still eligible to submit the homework.\n\nBe aware, however, that there will be deadlines for turning in homeworks and the final projects. So don't leave everything for the last minute.",
+              "filename": "_questions/data-engineering-zoomcamp/general/003_3f1424af17_course-can-i-still-join-the-course-after-the-start.md"
+            },
+            {
+              "id": "9e508f2212",
+              "question": "Course: When does the course start?",
+              "sort_order": 1,
+              "content": "The next cohort starts January 13th, 2025. More info at [DTC](https://datatalks.club/blog/guide-to-free-online-courses-at-datatalks-club.html).\n\n- Register before the course starts using this [link](https://airtable.com/shr6oVXeQvSI5HuWD).\n- Join the [course Telegram channel with announcements](https://t.me/dezoomcamp).\n- Don\u2019t forget to register in DataTalks.Club's Slack and join the channel.",
+              "filename": "_questions/data-engineering-zoomcamp/general/001_9e508f2212_course-when-does-the-course-start.md"
+            },
+            {
+              "id": "7255a1c3bc",
+              "images": [
+                {
+                  "description": "image #1",
+                  "id": "image_1",
+                  "path": "images/data-engineering-zoomcamp/image_813348b4.png"
+                }
+              ],
+              "question": "Leaderboard: how do find myself on the leaderboard?",
+              "sort_order": 20,
+              "content": "When you set up your account, you are automatically assigned a random name, such as \"Lucid Elbakyan.\" If you want to see what your display name is, follow these steps:\n\n- Go to your profile.\n  - 2025: [https://courses.datatalks.club/de-zoomcamp-2025/enrollment](https://courses.datatalks.club/de-zoomcamp-2025/enrollment)\n  - 2024: [https://courses.datatalks.club/de-zoomcamp-2024/enrollment](https://courses.datatalks.club/de-zoomcamp-2025/enrollment)\n- Log in.\n- Your display name is shown. You can also change it if you wish. \n- Ensure your certificate name is correct, as this name will later be printed on your certificate.\n\n<{IMAGE:image_1}>",
+              "filename": "_questions/data-engineering-zoomcamp/general/020_7255a1c3bc_leaderboard-how-do-find-myself-on-the-leaderboard.md"
+            },
+            {
+              "id": "3774a79c13",
+              "question": "Certificate: Do I need to do the homeworks to get the certificate?",
+              "sort_order": 14,
+              "content": "No, as long as you complete the peer-reviewed capstone projects on time, you can receive the certificate. You do not need to do the homeworks if you join late, for example.",
+              "filename": "_questions/data-engineering-zoomcamp/general/014_3774a79c13_certificate-do-i-need-to-do-the-homeworks-to-get-t.md"
+            },
+            {
+              "id": "4277a9cb86",
+              "question": "Postgres: \"Column does not exist\" but it actually does (Pyscopg2 error in MacBook Pro M2)",
+              "sort_order": 77,
+              "content": "In join queries, if you mention the column name directly or enclose it in single quotes, you'll encounter an error saying \"column does not exist\".\n\n**Solution:** Enclose the column names in double quotes, and it will work correctly.",
+              "filename": "_questions/data-engineering-zoomcamp/module-1/077_4277a9cb86_postgres-column-does-not-exist-but-it-actually-doe.md"
+            }
+          ],
+          "tool_call_id": "call_KuIQlaZwVvDgutVCyyFVTp3j",
+          "metadata": null,
+          "timestamp": "2025-10-06T18:41:45.127257+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a helpful assistant that answers questions about documentation.\n\nUse the search tool to find relevant information from the course materials before answering questions.\n\nIf you can find specific information through search, use it to provide accurate answers.\n\nAlways include references by citing the filename of the source material you used.\nReplace it with the full path to the GitHub repository:\n\"https://github.com/DataTalksClub/faq/blob/main/\"\nFormat: [LINK TITLE](FULL_GITHUB_LINK)\n\n\nIf the search doesn't return relevant results, let the user know and provide general guidance.",
+      "kind": "request"
+    },
+    {
+      "parts": [
+        {
+          "content": "To join the courses, you need to follow these steps:\n\n1. **Check Course Start Date**: The next cohort for the course starts on **January 13th, 2025**. More detailed information can be found [here](https://datatalks.club/blog/guide-to-free-online-courses-at-datatalks-club.html).\n\n2. **Register**: Make sure to register before the course starts using the registration link provided, which can be found [here](https://airtable.com/shr6oVXeQvSI5HuWD).\n\n3. **Join Communication Channels**: \n   - You can join the [course Telegram channel](https://t.me/dezoomcamp) for announcements.\n   - Additionally, register in DataTalks.Club's Slack and join the relevant channel for updates.\n\nPlease note that even if you don't register before the start date, you are still eligible to submit homework, but you must adhere to deadlines for assignments and projects.\n\nFor more specifics, you can check the following documents:\n- [Can I still join the course after the start date?](https://github.com/DataTalksClub/faq/blob/main/_questions/data-engineering-zoomcamp/general/003_3f1424af17_course-can-i-still-join-the-course-after-the-start.md)\n- [When does the course start?](https://github.com/DataTalksClub/faq/blob/main/_questions/data-engineering-zoomcamp/general/001_9e508f2212_course-when-does-the-course-start.md)",
+          "id": null,
+          "part_kind": "text"
+        }
+      ],
+      "usage": {
+        "input_tokens": 1044,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 321,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "model_name": "openai/gpt-4o-mini",
+      "timestamp": "2025-10-06T18:41:44+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "stop"
+      },
+      "provider_response_id": "gen-1759776104-qSOkDnFJGUkzWSC6p1ty",
+      "finish_reason": "stop"
+    }
+  ],
+  "source": "user"
+}
