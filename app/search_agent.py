@@ -1,11 +1,12 @@
+import os
 import search_tools
 from pydantic_ai import Agent
 
 
 SYSTEM_PROMPT_TEMPLATE = """
-You are a helpful assistant that answers questions about documentation.  
+You are a helpful assistant that answers questions about documentation.
 
-Use the search tool to find relevant information from the course materials before answering questions.  
+Use the search tool to find relevant information from the course materials before answering questions.
 
 If you can find specific information through search, use it to provide accurate answers.
 
@@ -22,6 +23,10 @@ def init_agent(index, repo_owner, repo_name):
     system_prompt = SYSTEM_PROMPT_TEMPLATE.format(repo_owner=repo_owner, repo_name=repo_name)
 
     search_tool = search_tools.SearchTool(index=index)
+
+    # Set OpenRouter environment variables
+    os.environ['OPENAI_API_KEY'] = os.getenv('OPENROUTER_API_KEY', '')
+    os.environ['OPENAI_BASE_URL'] = os.getenv('OPENROUTER_BASE_URL', '')
 
     agent = Agent(
         name="gh_agent",
